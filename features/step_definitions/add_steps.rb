@@ -1,5 +1,5 @@
 require 'watir'
-browser = Watir::Browser.new :chrome
+browser = Watir::Browser.new :firefox
 url = "http://localhost:3000"
 
 Given(/^I visit the calculator page for add$/) do
@@ -20,4 +20,12 @@ end
 
 Then(/^I should see '(\d+)'$/) do |answer|
   assert_equal(browser.div(:id => 'answer').text,answer)
+end
+
+Given(/^I fill in nothing for 'second'$/) do
+  0# express the regexp above with the code you wish you had
+end
+
+Given(/^I fill in nothing for 'first'$/) do
+  0 # express the regexp above with the code you wish you had
 end
