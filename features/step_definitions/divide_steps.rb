@@ -1,19 +1,22 @@
-require 'watir'
-browser = Watir::Browser.new :firefox
-url = "http://localhost:3000"
 
 Given(/^I visit the calculator page for divide$/) do
-  pending # express the regexp above with the code you wish you had
+  visit "http://localhost:3000/divide" # express the regexp above with the code you wish you had
+end
+
+Given(/^I fill in '(\d+)' for 'firstd'$/) do |number|
+fill_in 'first', :with => number
+end
+
+Given(/^I fill in '(\d+)' for 'secondd'$/) do |number|
+fill_in 'second', :with => number
 end
 
 Given(/^I click on 'Divide'$/) do
-  pending # express the regexp above with the code you wish you had
+click_button('Divide')
 end
 
-Then(/^I should see 'ZeroDivisionError: divided by (\d+)'$/) do |arg1|
-  pending # express the regexp above with the code you wish you had
-end
-
-Then(/^I should see '(\d+)\.(\d+)'$/) do |arg1, arg2|
-  pending # express the regexp above with the code you wish you had
+Then(/^I should see '(\d+)'$/) do |answer|
+within("#answer") do
+     page.has_content?(answer)
+   end
 end
