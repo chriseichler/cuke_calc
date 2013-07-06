@@ -15,6 +15,14 @@ Given(/^I click on 'Add'$/) do
 click_button('Add')
 end
 
+Given(/^I fill in nothing for 'second'$/) do
+   fill_in 'second', :with => ""
+end
+
+Given(/^I fill in nothing for 'first'$/) do
+   fill_in 'first', :with => ""
+end
+
 Then(/^I should see '(\d+)'$/) do |answer|
 within("#answer") do
      page.has_content?(answer)

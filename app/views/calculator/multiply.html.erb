@@ -1,0 +1,9 @@
+<form method="post" action="/multiply">
+  <input type="text" id="first" name="first"/>
+  <input type="text" id="second" name="second"/>
+  <button id="multiply_button">Multiply</button>
+</form>
+<h4>Answer:</h4>
+<div id="answer">
+  <%= @answer ? @answer : '' %>
+</div>

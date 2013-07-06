@@ -13,4 +13,12 @@ class CalculatorController < ApplicationController
    else @answer = 'Error' 
     end
   end
+
+  def multiply
+    if params[:first] && params[:second]
+      @answer = params[:first].to_f * params[:second].to_f
+      render :multiply
+   else @answer = 'Error' 
+    end
+  end
 end
