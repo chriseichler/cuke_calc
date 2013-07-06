@@ -22,4 +22,4 @@ Given I visit the calculator page for subtract
   And I fill in '12' for 'first'
   And I fill in '40' for 'second'
   And I click on 'Subtract'
-  Then I should see '-28'
+  Then I should see '-28.0'
