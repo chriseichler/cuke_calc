@@ -10,7 +10,7 @@ Scenario: Divide two numbers
   And I click on 'Divide'
   Then I should see '3'
 
-Scenario: Divide one number by zero
+Scenario: Divide one number by one
   Given I visit the calculator page for divide
   And I fill in '120' for 'first'
   And I fill in '1' for 'second'
